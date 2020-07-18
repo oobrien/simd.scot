@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Was IE=EmulateIE9 -->
+	<meta name="viewport" content="minimal-ui, initial-scale=0.5, user-scalable=no, width=device-width">
+	<title>SIMD (Scottish Index of Multiple Deprivation) 2012</title>
+
+	<link rel="stylesheet" type="text/css" media="all" href="/js/openlayers/v3.17.1-dist/ol.css" />	
+	<link rel="stylesheet" type="text/css" media="all" href="/style.css" />	
+	<link rel="stylesheet" type="text/css" media="all" href="/js/jquery-ui-1.12.0/jquery-ui.css" />		
+	<link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	
+	<meta property="og:title" content="SIMD (Scottish Index of Multiple Deprivation) 2012" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="https://simd.scot/2012/" />
+	<meta property="og:description" content="Scottish Index of Multiple Deprivation 2012" />
+	<meta property="og:image" content="https://simd.scot/images/thumbnail.png" />
+	<meta property="og:site_name" content="Scottish Index of Multiple Deprivation 2012" />    
+
+	<script type="text/javascript" src="/js/proj4.js"></script>	     
+	<script type="text/javascript" src="/js/openlayers/v3.17.1-dist/ol.js"></script>			
+	<script type="text/javascript" src="/js/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="/js/jquery-ui-1.12.0/jquery-ui.js"></script>
+	<script type="text/javascript" src="/js/colorbrewer.js"></script> 
+	<script type="text/javascript" src="config.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+		
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-51799236-8', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</head>
+<body>   
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1839576462940777',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<div id="mappanel">
+    <div id="mapcontainer">
+    </div>
+</div>
+
+<div id="controlpanel">
+	<div id='frontpart'>
+		<div id='logo'>	
+			<img class='title' src='/images/simd.png' alt='SIMD' />
+			<div class='subtitle'>Scottish Index of<br />Multiple Deprivation 2012</div>
+		</div>
+	</div>
+	
+	<div id='chooser' class='draggable ui-corner-all ui-widget-content uipanel'>
+		<h3>1. Map Chooser</h3>
+		<div id='choosercontent'>
+			<div id="radioMaps" class='chooseroption'>
+				<input type="radio" name="radioMaps" id='radiosimd2012' /><label for="radiosimd2012" class='mapname'>SIMD Deciles</label><br />
+				<input type="radio" name="radioMaps" id='radiosimd2012_20pc' /><label for="radiosimd2012_20pc" class='mapname'>Most Deprived 20%</label><br />
+				<input type="radio" name="radioMaps" id='radiosimd2012_10pc' /><label for="radiosimd2012_10pc" class='mapname'>Most Deprived 10%</label><br />
+				<input type="radio" name="radioMaps" id='radiosimd2012_5pc' /><label for="radiosimd2012_5pc" class='mapname'>Most Deprived 5%</label>
+			</div>
+		</div>
+	</div>
+	
+	<div id='options'  class='draggable ui-corner-all ui-widget-content uipanel'>	
+		<h3>2. Area Finder</h3>
+		<div id='optionscontent'>
+			<div>
+				<div id='layercaption'>Layers:</div>
+				<button id='buttonBuildings'>Land</button>
+				<button id='buttonPlacenames'>Labels</button>
+				<div style='width: 70px; float: left; padding-top: 5px;'></div>
+				<button id='buttonDZ' style='margin-top: 5px;'>Datazone Circles</button>
+			</div>
+			<div>
+				<div id='jumpcaption'>Council Area:</div> 
+				<select id='councilAreasS' onchange='jumpToCouncilArea()'>
+					<option>Jump to...</option>
+				</select>
+			</div>
+			<div id='postcodesearch'>
+				<div id='postcodecaption'>Postcode:</div> 
+				<input id='postcode' type='text' size='8' maxlength='8' />
+				<button type='button' id='postcodeButton' onclick='jumpToPostcode();'>Go</button>
+			</div>
+			<div style='padding-top: 5px;'>
+				<button id='clearSelectedDataButton' onclick="clearDownloadList()">Clear selected data</button> <div id='selectedCount'></div>					
+			</div>
+		</div>
+	</div>
+
+	<div id='download'  class='draggable ui-corner-all ui-widget-content uipanel'>	
+		<h3>3. Download Options</h3>
+		<div id='downloadcontent'>
+			<div>
+				Selected data:
+				<button id='downloadSelectedDataButton' onclick="downloadSelectedData(downloadText.value)">Download</button>
+			</div>
+			<div style='padding-top: 5px;'>
+				Map: 
+				<button onclick="downloadWindow()" >Download</button>
+				<button onclick="printWindow()">Print</button>
+			</div>
+			<div style='padding-top: 5px;'>
+				<button onclick="downloadAll()">Download all data & geographies</button>
+			</div>
+		</div>
+	</div>
+	
+	<div id='controlpanelbottom'>
+	
+		<div id='cityjump'>		
+		</div>
+
+		<div id='metapanel'>
+			Important note: Measures are averaged within each local area. The colour coding on a building is therefore <u>not</u> necessarily indicative 
+			of that building. Non-residential buildings are shown but measures do not apply to them.<br /><br />
+			Contains Scottish Government &amp; Ordnance Survey data © Crown copyright &amp; database right 2012-6.
+		</div>
+	</div>
+</div>
+
+<div id='switchpanel' class='draggable ui-corner-all ui-widget-content uipanel'>
+	<h3>Map Key</h3>
+	<div id='switchpanelcontent'>
+		<div>
+			<div id='lead'></div>
+			<div id='keypanel'>
+				<div id='keypanel1'></div>
+				<div id='keypanel2'></div>
+				<div id='keypanel3'></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id='infopanel' class='draggable ui-corner-all ui-widget-content uipanel'>
+	<h3>Current Data Zone</h3>
+	<div id='infopanelcontent'>
+	</div>
+</div>
+
+<div id='socialpanel'>
+	
+		<table><tr>
+			<td class="fb-like" data-href="https://simd.scot/2012/" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false" data-share="true"></td>
+			<td id='tweet-span'>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-text="#SIMD" data-via="EqualityPoverty" data-lng="en" data-dnt="true" data-count="none">Tweet</a>
+			</td>		
+
+		</tr></table>	
+</div>
+
+<div id="downloadTextContainer">
+    <textarea id="downloadText"></textarea>
+</div>
+
+<div id="welcomepanel">
+	<div id="blurpanel">
+	</div>
+	<div id="welcomecontentpanel">
+		<img class='title' src='/images/simd.png' alt='SIMD' />
+		<div class='subtitle'>Scottish Index of<br />Multiple Deprivation</div>
+		<table>
+			<tr>
+			<td>Council Area:</td>
+			<td colspan='2'>
+				<select id='councilAreasSM' onchange='jumpToCouncilAreaM()'>
+					<option>Jump to...</option>
+				</select>
+			</td></tr>
+			<tr><td style='text-align: center;'><i>or</i></td><td></td><td></td></tr>
+			<tr>
+				<td>Postcode:</td>
+				<td><input id='postcodeM' type='text' size='10' maxlength='8' /></td>
+				<td><button type='button' id='postcodeButtonM' onclick='jumpToPostcodeM();'>Go</button></td>
+			</tr>
+			<tr><td style='text-align: center;'><i>or</i></td><td></td><td></td></tr>
+			<tr>
+				<td>Overall:</td>
+				<td colspan='2'><button id='welcomeclose'>Go to Map</button></td>
+			</tr>		
+		</table>
+	</div>
+</div>
+</body>
+</html>
+
