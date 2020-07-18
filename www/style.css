@@ -1,0 +1,492 @@
+body
+{
+	margin: 0; 
+	padding: 0; 
+	height: 100%;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 14px;
+}
+
+a
+{
+	text-decoration: none;
+	color: #1F2752;
+}
+
+a:hover
+{
+	color: #0044FF;
+}
+
+h3
+{
+	text-align: center; 
+	font-size: 14px;
+	text-transform: uppercase; 
+	margin-top: 0 !IMPORTANT;
+	border-top-left-radius: 4px !IMPORTANT;
+	border-top-right-radius: 4px !IMPORTANT;
+	padding: 0 3px 3px 3px !IMPORTANT;
+	border-width: 5px;
+}
+
+#mappanel
+{
+ 	position: absolute; 
+ 	left: 0; 
+ 	top: 0; 
+ 	right: 0; 
+ 	bottom: 0; 
+ 	height: 100%;cial
+}
+
+#radioMaps
+{
+	padding: 5px 0 0 0;	
+	white-space: nowrap;
+}
+
+#radioMaps label
+{
+	width: 140px;
+	margin: 2px;
+	text-align: left;
+	font-size: 10px;
+}
+
+#mapcontainer
+{
+	background-color: #958A80;
+ 	position: absolute; 
+ 	width: 100%; 
+ 	height: 100%;
+ 	margin-left: auto; margin-right: auto; 
+}
+
+#controlpanel
+{
+	position: absolute;
+	opacity: 0.9;
+	background-color: #ffffff;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 210px;
+	padding: 0 15px;
+	border-left: 10px solid #C81392; 
+}
+
+#controlpanelbottom
+{
+	position: absolute;
+	width: 210px;
+	bottom: 10px;
+	padding: 10px 0;
+	z-index: -1;
+	font-family: 'Titillium Web', sans-serif;
+
+}
+
+#tableselect
+{
+	font-size: 10px;
+}
+
+#logo
+{
+	width: 200px;
+	text-align: center;
+}
+
+#infopanelcontent
+{
+	padding: 5px;
+}
+
+#igtext
+{
+	padding: 0 10px;
+}
+
+#controlpanel table
+{
+	margin: 10px 0;
+	border-spacing: 2px 2px;
+    border-collapse: separate;
+}
+
+#topiclist
+{
+	padding-bottom: 5px;
+}
+
+#topicbuttons 
+{
+	display: inline;
+	font-size: 10px;
+}
+
+#radioCentres 
+{
+	display: inline;
+	font-size: 10px;
+}
+
+
+#chooser, #options, #download
+{
+	border-radius: 10px;
+	border: 5px solid #1F2752 !IMPORTANT;
+	font-family: 'Titillium Web', sans-serif;
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+#choosercontent
+{
+	padding: 5px 0 10px 15px;
+
+}
+
+#optionscontent, #downloadcontent
+{
+	padding: 10px 0 10px 15px;
+}
+
+#optionscontent button, #downloadcontent button
+{
+	font-size: 10px;
+}
+
+#choosercontent, #optionscontent, #infopanelcontent, #downloadcontent
+{
+	font-family: 'Titillium Web', sans-serif;
+}
+
+#keypanel3
+{
+ clear: both;
+}
+
+#layercaption
+{
+	width: 70px; float: left; padding-top: 5px;
+}
+
+#jumpcaption, #jumpcaptionM
+{
+	width: 70px; float: left; padding-top: 12px;
+}
+
+#postcodecaption, #postcodecaptionM
+{
+	width: 70px; float: left; padding-top: 2px;
+}
+
+#postcodesearch, #postcodesearchM
+{
+	padding-top: 10px;
+}
+
+#keypanel
+{
+	margin-top: 5px;
+}
+
+#councilAreasS, #councilAreasSM
+{
+	margin-top: 10px;
+	width: 95px;
+}
+
+#selectedCount
+{
+	float: right;
+	padding-top: 5px;
+	padding-right: 15px;
+	font-size: 10px;
+}
+
+#metapanel
+{
+	font-size: 9px;
+	text-align: left;
+	padding-top: 5px;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+#switchpanel
+{
+	display: block;
+	position: absolute;
+	opacity: 0.9;
+	background-color: #ffffff;
+	top: 0;
+	right: 10px;
+	width: 225px;
+	text-align: center;
+	border-radius: 10px;
+	border: 5px solid #1F2752 !IMPORTANT;
+	font-family: 'Titillium Web', sans-serif;
+	margin-top: 10px;
+}
+
+#frontpart
+{
+	background-color: #fff;
+	opacity: 1;
+	padding-bottom: 10px;
+}
+
+#infopanel
+{
+	display: none;
+	position: absolute;
+	opacity: 0.9;
+	background-color: #ffffff;
+	top: 150px;
+	right: 10px;
+	width: 225px;
+	text-align: center;
+	border-radius: 10px;
+	border: 5px solid #1F2752 !IMPORTANT;
+	font-family: 'Titillium Web', sans-serif;
+	margin-top: 10px;
+	/* overflow: auto; */
+	padding: 0 !IMPORTANT;
+}
+
+#socialpanel
+{
+	position: absolute;
+	opacity: 0.9;
+	background-color: #ffffff;
+	left: 50%;
+	bottom: 0;
+	margin-left: -110px;
+	width: 220px;
+	height: 35px;
+	text-align: center;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-top: 5px solid #1F2752;
+	border-left: 5px solid #1F2752;
+	border-right: 5px solid #1F2752;
+	font-family: 'Titillium Web', sans-serif;
+	padding: 3px 0 0 6px;
+}
+
+#switchpanelcontent
+{
+	padding: 10px 10px 0 10px;
+	height: 95px;
+
+}
+
+#buttonPlacenames, #postcodeButton, #buttonBuildings
+{
+	font-size: 12px;
+}
+
+#postcodeButtonM
+{
+	font-size: 18px;
+}
+
+#cityjump
+{
+	text-align: center;
+}
+
+#cityjump button
+{
+	font-size: 9px;
+	padding: 5px;
+	margin: 2px;
+}
+
+
+#infopanelcontent td, #infopanelcontent th
+{
+	font-size: 9px;
+	width: 49px;
+}
+
+#poptable
+{
+	width: 200px;
+	padding: 3px;
+	margin: 10px auto 0 auto;
+	border: 2px solid #C81392;
+}
+
+#downloadTextContainer { display: none; }
+
+#tweet-span { padding: 3px 10px 0 0; }
+
+#welcomepanel
+{
+	display: none;
+	position: absolute;
+	width: 100%:
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 250;
+	padding: 0;
+	margin: 0;
+}
+
+#blurpanel
+{
+	display: none;
+	position: absolute;
+	width: 100%:
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;	
+	opacity: 0.9;
+	background-color: white;
+	filter: blur(5px);
+}
+
+#welcomecontentpanel
+{
+	display: none;
+   	position: relative;
+    width: 350px;
+    top: 30px;
+    margin: 0 auto;
+    border: 5px solid #1F2752;
+    border-radius: 20px;
+	padding: 20px 10px 10px 10px;
+	text-align: center;
+	vertical-align: center;
+	font-size: 18px;
+}
+
+#lead
+{
+	font-size: 18px;
+}
+
+#welcomecontentpanel img
+{
+	padding: 10px;
+	background-color: white;
+}
+
+#welcomecontentpanel select { margin-bottom: 5px; }
+
+#welcomecontentpanel table { margin: 20px; padding: 10px; }
+
+#welcomecontentpanel td {text-align: left; padding: 5px; }
+
+#componenttable td
+{
+	font-size: 9px; 
+	margin: 0; 
+	text-align: left;
+}
+
+.componentpic
+{
+	width: 30px; height: 30px;
+}
+
+.keyitem
+{
+	font-size: 10px; padding: 2px;
+}
+
+.keyitemshort
+{
+	float: left; width: 10%; font-size: 10px; padding: 2px 0;
+}
+
+.fb-like { padding: 0 10px 0 0; }
+.title 
+{ 
+	width: 160px; 
+	height: 76px; 
+	border-width: 0;
+	padding: 15px 0 0px 10px; 
+}
+.subtitle { font-size: 16px; padding: 0 0 0 10px; }
+
+.ui-state-active
+{
+	border: 1px solid #1F2752 !IMPORTANT;
+    background: #1F2752 !IMPORTANT;
+}
+
+.ui-checkboxradio-checked
+{
+	border: 1px solid #C81392 !IMPORTANT;
+    background: #C81392 !IMPORTANT; 
+}
+
+.ol-zoom
+{
+	bottom: auto !IMPORTANT;
+	left: auto !IMPORTANT;
+	top: 10px;
+	right: 255px;
+	position: absolute;
+}
+
+.ol-scale-line
+{
+	left: auto !IMPORTANT;
+	top: 10px !IMPORTANT;
+	height: 15px;
+	right: 293px;
+	position: absolute;
+	padding: 6px;
+	opacity: 0.5;
+	border-radius: 4px;
+}
+
+@media print
+{
+	#controlpanel { display: none; }
+	#switchpanel { display: none; }
+	#infopanel { display: none; }
+	.ol-scale-line { right: 10px; } 
+	#mapcontainer { height: auto; }
+	#socialpanel { display: none; }
+	
+}
+
+@media screen and (max-width: 800px) 
+{
+	#switchpanel { display: none; }
+	#infopanel { top: 0; }
+	#infopanelcontent { padding: 0; }
+	#controlpanel { width: 160px; padding: 5px; border-left: 0 solid #1F2752; }
+	#controlpanelbottom { width :150px; }
+	#metapanel { display: none; }
+	#logo { width: 150px; }
+	.title { padding: 5px 0 0 0; margin: 0; }
+	.subtitle { font-size: 12px; }
+	#frontpart { padding: 0; }
+	#radioMaps label {	width: 120px; font-size: 8px; }
+	#layercaption { display: none; }
+	#jumpcaption { display: none; }
+	#postcodecaption { width: 40px; }
+	#postcode { width: 50px; }
+	#choosercontent, #optionscontent, #downloadcontent { padding: 5px 2px; }
+	#igtext { display: none; }
+	
+	#welcomepanel, #blurpanel, #welcomecontentpanel
+	{	
+		display: block;
+	}	
+}
+
+
+

@@ -1,0 +1,554 @@
+body
+{
+	margin: 0; 
+	padding: 0; 
+	height: 100%;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 14px;
+}
+
+a
+{
+	text-decoration: none;
+	color: #0065bd;
+}
+
+a:hover
+{
+	color: #0044FF;
+}
+
+h3
+{
+	text-align: center; 
+	font-size: 14px;
+	text-transform: uppercase; 
+	margin-top: 0 !IMPORTANT;
+	padding: 0 3px 3px 3px !IMPORTANT;
+	border-width: 5px;
+}
+
+#mappanel
+{
+ 	position: absolute; 
+ 	left: 0; 
+ 	top: 0; 
+ 	right: 0; 
+ 	bottom: 0; 
+ 	height: 100%;cial
+}
+
+#radioMaps
+{
+	padding: 0;	
+	white-space: nowrap;
+}
+
+#radioMaps label
+{
+	width: 144px;
+	margin: 1px;
+	text-align: center;
+	font-size: 10px;
+    border-radius: 3px;
+
+}
+
+#radioYears label
+{
+	width: 32px;
+	text-align: center;
+	margin: 1px;
+	font-size: 10px;
+}
+
+#mapcontainer
+{
+	background-color: #958A80;
+ 	position: absolute; 
+ 	width: 100%; 
+ 	height: 100%;
+ 	margin-left: auto; margin-right: auto; 
+}
+
+#controlpanel
+{
+	position: absolute;
+	opacity: 0.9;
+	background-color: #ffffff;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 210px;
+	padding: 0 15px;
+}
+
+#controlpanelbottom
+{
+	position: absolute;
+	width: 210px;
+	bottom: 5px;
+	padding: 10px 0 0 0;
+	z-index: -1;
+	font-family: 'Titillium Web', sans-serif;
+
+}
+
+#tableselect
+{
+	font-size: 10px;
+}
+
+#logo
+{
+	text-align: center;
+}
+
+#selecteddatadownload2012
+{
+	font-size: 9px;
+	margin-right: 15px;
+}
+
+#infopanelcontent
+{
+	padding: 5px;
+}
+
+#igtext
+{
+	padding: 0 10px;
+	height: 40px;
+}
+
+#controlpanel table
+{
+	margin: 10px 0;
+	border-spacing: 2px 2px;
+    border-collapse: separate;
+}
+
+#topiclist
+{
+	padding-bottom: 5px;
+}
+
+#topicbuttons 
+{
+	display: inline;
+	font-size: 10px;
+}
+
+#radioYears
+{
+	margin: 5px auto;
+}
+
+#chooser, #options, #download
+{
+	border: 3px solid #0065bd !IMPORTANT;
+	font-family: 'Titillium Web', sans-serif;
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+#choosercontent
+{
+	padding: 5px 0 10px 15px;
+
+}
+
+#optionscontent, #downloadcontent
+{
+	padding: 10px 0 10px 15px;
+}
+
+#optionscontent button, #downloadcontent button
+{
+	font-size: 10px;
+}
+
+#choosercontent, #optionscontent, #infopanelcontent, #downloadcontent
+{
+	font-family: 'Titillium Web', sans-serif;
+}
+
+#keypanel2
+{
+	clear: both;
+	margin-top: 5px;
+}
+
+#layercaption
+{
+	width: 70px; float: left; padding-top: 5px;
+}
+
+#jumpcaption, #jumpcaptionM
+{
+	width: 70px; float: left; padding-top: 12px;
+}
+
+#postcodecaption, #postcodecaptionM, #datazonecaption
+{
+	width: 70px; float: left; padding-top: 2px;
+}
+
+#dzsearch
+{
+	padding-top: 10px;
+
+}
+
+#postcodesearch, #postcodesearchM
+{
+	padding-top: 10px;
+}
+
+#keypanel
+{
+	margin-top: 5px;
+}
+
+#councilAreasS, #councilAreasSM
+{
+	margin-top: 10px;
+	width: 95px;
+}
+
+#selectedCount
+{
+	float: right;
+	padding-top: 5px;
+	padding-right: 15px;
+	font-size: 10px;
+}
+
+#metapanel
+{
+	font-size: 9px;
+	text-align: left;
+	padding-top: 5px;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+#switchpanel
+{
+	display: block;
+	position: absolute;
+	opacity: 0.9;
+	background-color: #ffffff;
+	top: 0;
+	right: 10px;
+	width: 225px;
+	text-align: center;
+	border: 3px solid #0065bd !IMPORTANT;
+	font-family: 'Titillium Web', sans-serif;
+	margin-top: 10px;
+}
+
+#frontpart
+{
+	background-color: #fff;
+	opacity: 1;
+}
+
+#infopanel
+{
+	display: none;
+	position: absolute;
+	opacity: 0.9;
+	background-color: #ffffff;
+	top: 125px;
+	right: 10px;
+	width: 225px;
+	text-align: center;
+	border: 3px solid #0065bd !IMPORTANT;
+	font-family: 'Titillium Web', sans-serif;
+	margin-top: 10px;
+	/* overflow: auto; */
+	padding: 0 !IMPORTANT;
+}
+
+#socialpanel
+{
+	position: absolute;
+	opacity: 0.9;
+	background-color: #ffffff;
+	left: 50%;
+	bottom: 0;
+	margin-left: -100px;
+	width: 200px;
+	height: 35px;
+	text-align: center;
+	border-top: 3px solid #0065bd;
+	border-left: 3px solid #0065bd;
+	border-right: 3px solid #0065bd;
+	font-family: 'Titillium Web', sans-serif;
+	padding: 3px 0 0 6px;
+}
+
+#switchpanelcontent
+{
+	padding: 10px 10px 0 10px;
+	height: 75px;
+
+}
+
+#buttonPlacenames, #postcodeButton, #buttonBuildings
+{
+	font-size: 12px;
+}
+
+#postcodeButtonM
+{
+	font-size: 18px;
+}
+
+#cityjump
+{
+	text-align: center;
+}
+
+#cityjump button
+{
+	font-size: 9px;
+	padding: 5px;
+	margin: 2px;
+}
+
+
+#infopanelcontent td, #infopanelcontent th
+{
+	font-size: 9px;
+	width: 49px;
+}
+
+#poptable
+{
+	width: 200px;
+	padding: 3px;
+	margin: 10px auto 0 auto;
+	border: 2px solid #00437e;
+}
+
+#downloadTextContainer { display: none; }
+
+#tweet-span { padding: 3px 10px 0 0; }
+
+#welcomepanel
+{
+	display: none;
+	position: absolute;
+	width: 100%:
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 250;
+	padding: 0;
+	margin: 0;
+}
+
+#blurpanel
+{
+	display: none;
+	position: absolute;
+	width: 100%:
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;	
+	opacity: 0.9;
+	background-color: white;
+	filter: blur(5px);
+}
+
+#welcomecontentpanel
+{
+	display: none;
+   	position: relative;
+    width: 350px;
+    top: 30px;
+    margin: 0 auto;
+    border: 3px solid #0065bd;
+ 	padding: 20px 10px 10px 10px;
+	text-align: center;
+	vertical-align: center;
+	font-size: 18px;
+}
+
+#lead
+{
+	font-size: 18px;
+}
+
+#welcomecontentpanel img
+{
+	padding: 10px;
+	background-color: white;
+}
+
+#welcomecontentpanel select { margin-bottom: 5px; }
+
+#welcomecontentpanel table { margin: 20px; padding: 10px; }
+
+#welcomecontentpanel td {text-align: left; padding: 5px; }
+
+#componenttable td
+{
+	font-size: 9px; 
+	margin: 0; 
+	text-align: left;
+}
+
+.componentpic
+{
+	width: 30px; height: 30px;
+}
+
+.componentcaption
+{
+	padding-left: 5px;
+}
+
+.keyitemhalf
+{
+	float: left; width: 110px; font-size: 10px; padding: 2px 0;
+}
+
+
+.keyitemshort
+{
+	float: left; width: 22px; font-size: 10px; padding: 2px 0;
+}
+
+#deciletable
+{
+	font-size: 12px; margin: 10px 10px 5px 10px;
+}
+
+#deciletable span
+{
+	font-weight: bold;
+}
+
+.fb-like { padding: 0 10px 0 0; }
+.title 
+{ 
+	width: 160px; 
+	height: 76px; 
+	border-width: 0;
+	padding: 15px 0 0 0; 
+}
+.subtitle { font-size: 16px; padding: 0; }
+
+#mainsite, #mainsiteold
+{
+	margin: 10px auto 0 auto;
+	font-size: 12px;
+}
+
+.ui-state-active
+{
+	border: 1px solid #0065bd !IMPORTANT;
+    background: #0065bd !IMPORTANT;
+}
+
+.ui-checkboxradio-checked
+{
+	border: 1px solid #00437e !IMPORTANT;
+    background: #00437e !IMPORTANT; 
+}
+
+span.ui-checkboxradio-icon, span.ui-checkboxradio-icon-space { display: none; }
+
+.ol-zoom
+{
+	bottom: auto !IMPORTANT;
+	right: auto !IMPORTANT;
+	top: 10px;
+	left: 255px;
+	position: absolute;
+}
+
+.ol-attribution
+{
+	top: auto !IMPORTANT;
+	right: auto !IMPORTANT;
+	bottom: 10px;
+	left: 255px;
+	position: absolute;
+}
+
+.ol-scale-line
+{
+	left: auto !IMPORTANT;
+	bottom: 10px !IMPORTANT;
+	height: 18px;
+	right: 10px;
+	position: absolute;
+	padding: 6px;
+	opacity: 1;
+	border-radius: 4px;
+}
+
+.ui-corner-top, .ui-corner-all
+{
+	border-top-left-radius: 0 !IMPORTANT;
+	border-top-right-radius: 0 !IMPORTANT;	
+}
+
+.ui-corner-bottom, .ui-corner-all
+{
+	border-bottom-left-radius: 0 !IMPORTANT;
+	border-bottom-right-radius: 0 !IMPORTANT;	
+}
+
+@media print
+{
+	#controlpanel { display: none; }
+	#switchpanel { display: none; }
+	#infopanel { display: none; }
+	.ol-zoom { display: none; } 
+	.ol-attribution { display: none; } 
+	#mapcontainer { height: auto; }
+	#socialpanel { display: none; }
+	
+}
+
+@media screen and (max-width: 800px) 
+{
+	#welcomepanel, #blurpanel, #welcomecontentpanel
+	{	
+		display: block;
+	}	
+
+	#infopanelcontent { padding: 0; }
+	#controlpanel { width: 160px; padding: 5px; }
+	#controlpanelbottom { width :150px; }
+	#optionscontent div { padding-left: 3px; }
+	#deciletable { display: none; }
+	#poptable { display: none; }
+	#metapanel { display: none; }
+	#logo { width: 150px; }
+	.title { padding: 5px 0 0 0; margin: 0; }
+	.subtitle { font-size: 12px; }
+	.ol-zoom, .ol-attribution { left: 185px; }
+	#frontpart { padding: 0; }
+	#radioMaps label {	width: 127px; font-size: 8px; }
+	#radioYears label {	width: 29px; font-size: 8px; }
+	#layercaption { display: none; }
+	#jumpcaption { display: none; }
+	#postcodecaption, #datazonecaption { width: 40px; font-size: 8px; }
+	#postcode, #datazone { width: 40px; }
+	#choosercontent, #optionscontent, #downloadcontent { padding: 5px 2px; }
+	#igtext { display: none; }
+	#mainsite, #mainsiteold { font-size: 8px; width: 127px; }
+	
+}
+
+
+
