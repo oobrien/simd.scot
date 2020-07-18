@@ -1,7 +1,7 @@
 proj4.defs("EPSG:27700", "+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +datum=OSGB36 +units=m +no_defs");
 ol.proj.proj4.register(proj4);
 
-var tilePrefix = "https://tiles.simd.scot/simd/";
+var tilePrefix = "/* To be specified */";
 
 var DEFAULT_LAT = 55.9;
 var DEFAULT_LON = -4;
@@ -867,7 +867,7 @@ function handleSearchPostcodeCallback(json)
 				anchorXUnits: 'pixels',
 				anchorYUnits: 'pixels',
 				opacity: 1.0,
-				src: 'https://simd.scot/images/marker.png'
+				src: '/images/marker.png'
 			}))
 		});
 		
