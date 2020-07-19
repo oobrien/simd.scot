@@ -527,6 +527,15 @@ function setUTFURL()
 	);
 }
 
+function parseQueryStr() 
+{
+	var params = new URLSearchParams(document.location.search.substring(1));
+	var dz = params.get('dz');
+	if (!dz) return;
+	$('#datazone').val(dz);
+	searchForDatazone();
+}
+
 function setDefaults()
 {
 	/* Specified by user in URL. */
@@ -754,6 +763,11 @@ function searchForDatazone()
 		alert('This datazone is not in the correct format.');
 		return;		
 	}
+
+	var params = new URLSearchParams(location.search);
+	params.set('dz', p);
+
+	window.history.replaceState({}, '', `${location.pathname}?${params.toString()}${window.location.hash}`);
 
 	searchForDatazoneByFID(p, true);
 }
@@ -1191,7 +1205,7 @@ $( document ).ready(function()
 		currFilter = "_" + currentLayer.split("_")[1];
 	}
 	setTables();
-	
+	parseQueryStr();
   	var cityJumpHTML = "";
   	for (var i in cities)
   	{
